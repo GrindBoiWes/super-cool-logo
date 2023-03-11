@@ -53,7 +53,7 @@ inquirer
             break;
     }
     //const svgString = SVG(svg) 
-    fs.writeFile('logo.svg', SVG(svg), function (err) {
+    fs.writeFile('logo.svg', svg.getSVG(), function (err) {
         if (err) throw err;
         console.log('Your new logo has been created!')
     })
