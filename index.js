@@ -1,7 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const SVG = require('./examples');
-const {Square, Circle, Triangle} = require('./lib/shapes');
+const SVG = require('./lib/shapes');
+const { Square, Circle, Triangle} = require('./lib/shapes');
 
 function init () {
 inquirer
@@ -52,11 +52,12 @@ inquirer
             svg = new Triangle(text, textColor, shapeColor)
             break;
     }
-    const svgString = SVG(svg);
+    const svgString = SVG(svg) 
     fs.writeFile('logo.svg', svgString, function (err) {
         if (err) throw err;
         console.log('Your new logo has been created!')
     })
+
   });
 }
 
