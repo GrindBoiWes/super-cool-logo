@@ -38,25 +38,25 @@ inquirer
   ])
   
   .then(({text, textColor, shape, shapeColor}) => {
-    let svg;
+    let logoShape;
     switch (shape) {
         case 'Square':
-            svg = new Square(text, textColor, shapeColor)
+            logoShape = new Square(text, textColor, shapeColor)
             break;
         
         case 'Circle':
-            svg = new Circle(text, textColor, shapeColor)
+            logoShape = new Circle(text, textColor, shapeColor)
             break;
 
         case 'Triangle':
-            svg = new Triangle(text, textColor, shapeColor)
+            logoShape = new Triangle(text, textColor, shapeColor)
             break;
     }
     //const svgString = SVG(svg) 
-    fs.writeFile('logo.svg', svg.getSVG(), function (err) {
-        if (err) throw err;
-        console.log('Your new logo has been created!')
-    })
+
+    const svg = new SVG();
+
+     return fs.writeFile('logo.svg', svg.generate());
 
   });
 }
