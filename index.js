@@ -55,7 +55,7 @@ inquirer
     //const svgString = SVG(svg) 
 
     const svg = new SVG();
-
+    const svgString = svg.svgShape(logoShape);
      return fs.writeFile('logo.svg', svg.generate());
 
   });
