@@ -55,8 +55,8 @@ inquirer
     //const svgString = SVG(svg) 
 
     const svg = new SVG(logoShape);
-    const svgString = svg.svgShape(logoShape);
-     return fs.writeFile('logo.svg', svg.generate(), (err) => {
+      const svgString = svg.generate();
+      return fs.writeFile('logo.svg', svgString, (err) => {
         if (err) throw err;
         console.log('Your Logo has been Created!');
      });
