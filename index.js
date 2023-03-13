@@ -32,7 +32,7 @@ inquirer
 
     {
         type: 'input',
-        message: 'What color would you the shape to be? (Enter keyword or hex value',
+        message: 'What color would you the shape to be? (Enter keyword or hex value',     
         name: 'shapeColor'
     }
   ])
