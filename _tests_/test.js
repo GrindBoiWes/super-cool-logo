@@ -5,9 +5,9 @@ describe('Shapes', () => {
       it('Should create a purple square with teal text that says "wes"', () => {
         const square = new Square('wes', 'teal', 'purple');
         expect(square.getSVG()).toEqual(
-          `<rect width="50" height="50" fill="purple" stroke="teal" stroke-width="2"/>
-           <text x="25" y="35" fill="teal" font-size="24" text-anchor="middle">wes</text>`
-        );
+        `<rect width="150" height="150" fill="purple" stroke="teal" stroke-width="2"/>
+      <text x="125" y="90" fill="teal" font-size="60" text-anchor="middle">wes</text>`
+);
       });
     });
   
@@ -15,9 +15,9 @@ describe('Shapes', () => {
       it('Should create a purple circle with teal text that says "wes"', () => {
         const circle = new Circle('wes', 'teal', 'purple');
         expect(circle.getSVG()).toEqual(
-          `<circle cx="25" cy="25" r="25" fill="purple" stroke="teal" stroke-width="2"/>
-           <text x="25" y="35" fill="teal" font-size="24" text-anchor="middle">wes</text>`
-        );
+        `<circle cx="150" cy="100" r="80" fill="purple" stroke="teal" stroke-width="2"/>
+      <text x="150" y="125" fill="teal" font-size="60" text-anchor="middle">wes</text>`
+);
       });
     });
   
@@ -25,9 +25,9 @@ describe('Shapes', () => {
       it('Should create a purple triangle with teal text that says "wes"', () => {
         const triangle = new Triangle('wes', 'teal', 'purple');
         expect(triangle.getSVG()).toEqual(
-          `<polygon points="25,10 50,50 0,50" fill="purple" stroke="teal" stroke-width="2"/>
-           <text x="25" y="35" fill="teal" font-size="24" text-anchor="middle">wes</text>`
-        );
+        `<polygon points="25,175 150,0 275,175" fill="purple" stroke="teal" stroke-width="2"/>
+      <text x="150" y="120" fill="teal" font-size="60" text-anchor="middle">wes</text>`
+);
       });
     });
   });
