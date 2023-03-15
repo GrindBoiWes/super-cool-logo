@@ -1,8 +1,10 @@
+// Variables that runs installed packages, generate files, or imports info from their respective files
 const inquirer = require('inquirer');
 const fs = require('fs');
 const {SVG} = require('./lib/svg');
 const { Square, Circle, Triangle} = require('./lib/shapes');
 
+// This function runs the prompts to generate the logo based off of the user input
 function init () {
 inquirer
  .prompt ([
@@ -36,7 +38,7 @@ inquirer
         name: 'shapeColor'
     }
   ])
-  
+ //  This section is called on the returned promise of the inquirer prompts above.
   .then(({text, textColor, shape, shapeColor}) => {
     let logoShape;
     switch (shape) {
@@ -52,8 +54,8 @@ inquirer
             logoShape = new Triangle(text, textColor, shapeColor)
             break;
     }
-    //const svgString = SVG(svg) 
-
+   
+    // This section will generate the logo.svg file based off of the user input from the prompts above
     const svg = new SVG(logoShape);
       const svgString = svg.generate();
       return fs.writeFile('logo.svg', svgString, (err) => {

@@ -1,5 +1,6 @@
 const { Square, Circle, Triangle } = require('../lib/shapes');
-
+// This section runs the tests based off of the users input. It should match the text below to pass.
+// If it does not pass, an error will occur in the terminal
 describe('Shapes', () => {
     describe('Square', () => {
       it('Should create a purple square with teal text that says "wes"', () => {
